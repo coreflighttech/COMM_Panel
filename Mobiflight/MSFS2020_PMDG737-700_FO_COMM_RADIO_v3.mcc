@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MobiflightConnector>
   <outputs>
     <config guid="bb644eda-c761-47d7-82a0-b135bea5de7d">
       <active>true</active>
       <description>MSFS2020_COMM_FO ACTIVE DISPLAY</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.6.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:COM ACTIVE FREQUENCY:1,KHz)" UUID="b5a95362-411e-422d-9e6e-598b8b0bdcdf" />
+        <source type="SimConnect" VarType="CODE" Value="(A:COM ACTIVE FREQUENCY:2,KHz)" UUID="b5a95362-411e-422d-9e6e-598b8b0bdcdf" />
         <modifiers>
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="" operand="=" ifValue="1" elseValue="0" />
@@ -19,7 +19,7 @@
       <active>true</active>
       <description>MSFS2020_COMM_FO STANDBY DISPLAY</description>
       <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=9.6.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <source type="SimConnect" VarType="CODE" Value="(A:COM STANDBY FREQUENCY:1,KHz)" UUID="0c6afa60-4a6e-405d-91a5-1d7ba95bfe11" />
+        <source type="SimConnect" VarType="CODE" Value="(A:COM STANDBY FREQUENCY:2,KHz)" UUID="0c6afa60-4a6e-405d-91a5-1d7ba95bfe11" />
         <modifiers>
           <transformation active="False" expression="$" substrStart="0" substrEnd="7" />
           <comparison active="False" value="-1" operand="!=" ifValue="" elseValue="123456" />
@@ -54,9 +54,9 @@
       <description>MSFS2020_FO COMM INNER ENC</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.6.0.0, Culture=neutral, PublicKeyToken=null" serial="FO_COMM_v4/ SN-738-d02" name="FO_COM_IN_ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
-          <onLeft type="MSFS2020CustomInputAction" command="72708 (&gt;K:ROTOR_BRAKE)" presetId="eb54767f-443e-48dc-ba22-a87065a5cb6c" />
+          <onLeft type="MSFS2020CustomInputAction" command="84308 (&gt;K:ROTOR_BRAKE)" presetId="4f1ff70e-9db2-4897-8661-5db00d8109ae" />
           <onLeftFast />
-          <onRight type="MSFS2020CustomInputAction" command="72707 (&gt;K:ROTOR_BRAKE)" presetId="b2eb3ec9-81bb-4795-9124-9b0f6fc30fe5" />
+          <onRight type="MSFS2020CustomInputAction" command="84307 (&gt;K:ROTOR_BRAKE)" presetId="5e9dfee4-6aaf-4aab-85a5-26912e54b0bf" />
           <onRightFast />
         </encoder>
         <preconditions />
@@ -68,9 +68,9 @@
       <description>MSFS2020_FO COMM OUTER ENC</description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.6.0.0, Culture=neutral, PublicKeyToken=null" serial="FO_COMM_v4/ SN-738-d02" name="FO_COM_OUT_ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <encoder>
-          <onLeft type="MSFS2020CustomInputAction" command="72608 (&gt;K:ROTOR_BRAKE)" presetId="2b768c1c-6ee0-43b7-a6f0-0cbd8fef7dd5" />
+          <onLeft type="MSFS2020CustomInputAction" command="84208 (&gt;K:ROTOR_BRAKE)" presetId="05130fa0-2df3-41f9-b023-021a0d3013b8" />
           <onLeftFast />
-          <onRight type="MSFS2020CustomInputAction" command="72607 (&gt;K:ROTOR_BRAKE)" presetId="9b378ad3-080d-41d4-ae29-7c711cb998ad" />
+          <onRight type="MSFS2020CustomInputAction" command="84207 (&gt;K:ROTOR_BRAKE)" presetId="1ef0daa7-80ea-4311-b81c-6c7fd1ac1e51" />
           <onRightFast />
         </encoder>
         <preconditions />
@@ -82,7 +82,7 @@
       <description>MSFS2020_FO COMM TFR </description>
       <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=9.6.0.0, Culture=neutral, PublicKeyToken=null" serial="FO_COMM_v4/ SN-738-d02" name="FO_COM_TFR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <button>
-          <onPress type="MSFS2020CustomInputAction" command="72101 (&gt;K:ROTOR_BRAKE)" presetId="86b28712-b6cb-408e-9fd4-70cb95f9421e" />
+          <onPress type="MSFS2020CustomInputAction" command="83701 (&gt;K:ROTOR_BRAKE)" presetId="426c6583-0dd4-437d-846a-8f447dd80b00" />
           <onRelease />
         </button>
         <preconditions />
