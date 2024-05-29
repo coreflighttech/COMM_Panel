@@ -33,7 +33,4 @@ Any feedback, please leave an e-mail to info@coreflighttech.com
 Best Regards,
  Core Flight Tech. Team
 
-https://www.youtube.com/watch?v=C7VLe95_iZ8&ab_channel=COREFlightTechnologies
-
-https://www.youtube.com/watch?v=951ljxtDHrw&ab_channel=COREFlightTechnologies
 
