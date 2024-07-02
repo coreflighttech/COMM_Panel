@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs>
+    <config guid="bb644eda-c761-47d7-82a0-b135bea5de7d">
+      <active>true</active>
+      <description>MSFS2020_PMDG777_FO_COMM ACTIVE DISPLAY</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:COM ACTIVE FREQUENCY:2,KHz)" UUID="b5a95362-411e-422d-9e6e-598b8b0bdcdf" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="False" expression="$" />
+          <comparison active="False" value="" operand="=" ifValue="1" elseValue="0" />
+        </modifiers>
+        <display type="Display Module" serial="CoreFlightTech COMM (FO)/ SN-83F-C04" trigger="normal" ledAddress="FO_COM_ACTIVE" ledConnector="1" ledModuleSize="8" ledPadding="False" ledPaddingChar="0" ledDigits="0,1,2,3,4,5" ledDecimalPoints="3" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="45325ee7-2129-420f-8805-4a1d103b4b12">
+      <active>true</active>
+      <description>MSFS2020_PMDG777_FO_COMM STANDBY DISPLAY</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(A:COM STANDBY FREQUENCY:2,KHz)" UUID="0c6afa60-4a6e-405d-91a5-1d7ba95bfe11" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="False" expression="$" />
+          <comparison active="False" value="-1" operand="!=" ifValue="" elseValue="123456" />
+        </modifiers>
+        <display type="Display Module" serial="CoreFlightTech COMM (FO)/ SN-83F-C04" trigger="normal" ledAddress="FO_COM_STANDBY" ledConnector="1" ledModuleSize="8" ledPadding="False" ledPaddingChar=" " ledDigits="0,1,2,3,4,5" ledDecimalPoints="3" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9e29436c-aa73-4f0f-8402-9338d5a4a9b2">
+      <active>true</active>
+      <description>MSFS2020_PMDG777_FO_COMM BACKLIGHT - CHECK YOUTUBE VIDEO FOR MORE SETTING</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:BL_Pedestal, number)" UUID="6cf89bcd-3f58-4ae8-812b-7702eebc6732" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="False" expression="$" />
+          <comparison active="False" value="-1" operand="!=" ifValue="1" elseValue="0" />
+          <interpolation active="True">
+            <value x="0" y="0" />
+            <value x="1" y="255" />
+          </interpolation>
+        </modifiers>
+        <display type="Output" serial="CoreFlightTech COMM (FO)/ SN-83F-C04" trigger="normal" pin="FO_COM_BLIGHT" pinBrightness="255" pinPwm="True" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </outputs>
+  <inputs>
+    <config guid="6f023812-9b70-446e-932c-4c5c0325702b">
+      <active>true</active>
+      <description>MSFS2020_PMDG777_FO_COMM INNER ENC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (FO)/ SN-83F-C04" name="FO_COM_IN_ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="79908 (&gt;K:ROTOR_BRAKE)" presetId="9f7706f8-7aef-4a5f-b957-de41e965589e" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="79907 (&gt;K:ROTOR_BRAKE)" presetId="07f4a88d-d7b5-4650-b84a-a581e0bfbfdd" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="f4da7bdb-e67f-4e08-8a02-481a204370ea">
+      <active>true</active>
+      <description>MSFS2020_PMDG777_FO_COMM OUTER ENC</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (FO)/ SN-83F-C04" name="FO_COM_OUT_ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="80008 (&gt;K:ROTOR_BRAKE)" presetId="e337a397-7806-42d2-942b-982483802faa" />
+          <onLeftFast />
+          <onRight type="MSFS2020CustomInputAction" command="80007 (&gt;K:ROTOR_BRAKE)" presetId="0bb2127f-a9b7-4d48-9c86-38dbcee609dd" />
+          <onRightFast />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="6d51a1a7-a244-49bd-87b7-e200ae61b8a1">
+      <active>true</active>
+      <description>MSFS2020_PMDG777_FO_COMM TFR </description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (FO)/ SN-83F-C04" name="FO_COM_TFR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="80101 (&gt;K:ROTOR_BRAKE)" presetId="c7252c0f-e30e-48c2-a926-55dbf49420e0" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="1f5343f3-a76f-4921-ba8f-7c86ad499aae">
+      <active>false</active>
+      <description>MSFS2020_PMDG777_FO_COMM TEST - (DEACTIVE)</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (FO)/ SN-83F-C04" name="FO_COM_TEST" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>
