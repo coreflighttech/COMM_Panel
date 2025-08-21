@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs>
+    <config guid="e1739094-4d90-4dab-9e79-2fe3e3e6441e">
+      <active>true</active>
+      <description>FNX_ACTIVE_Display</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:N_PED_RMP1_ACTIVE)" UUID="2da8c86e-37ae-45b1-a9d2-98a81812a682" />
+        <test type="Float" value="234242" />
+        <modifiers />
+        <display type="Display Module" serial="CoreFlightTech COMM (CPT)/ SN-F58-4C7" trigger="normal" ledAddress="CPT_COM_ACTIVE" ledConnector="1" ledModuleSize="8" ledPadding="False" ledPaddingChar="0" ledDigits="0,1,2,3,4,5" ledDecimalPoints="3" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="344be7b4-74d1-4354-84ef-5b0ef3f7d6bc">
+      <active>true</active>
+      <description>FNX_STANDBY_Display</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="SimConnect" VarType="CODE" Value="(L:N_PED_RMP1_STDBY)" UUID="ad5a6328-0b5d-45f1-908d-66e1b72129fc" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="Display Module" serial="CoreFlightTech COMM (CPT)/ SN-F58-4C7" trigger="normal" ledAddress="CPT_COM_STANDBY" ledConnector="1" ledModuleSize="8" ledPadding="False" ledPaddingChar="0" ledDigits="0,1,2,3,4,5" ledDecimalPoints="3" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </outputs>
+  <inputs>
+    <config guid="1f4c2363-801e-43d2-8f00-669cc6091200">
+      <active>false</active>
+      <description>FNX_Test_button</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (CPT)/ SN-F58-4C7" name="CPT_COM_TEST" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="" presetId="-" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="0afb952d-c7af-45e7-913a-abe1a3670f5e">
+      <active>true</active>
+      <description>FNX_TFR_button</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (CPT)/ SN-F58-4C7" name="CPT_COM_TFR" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(L:S_PED_RMP1_XFER) ++ (&gt;L:S_PED_RMP1_XFER)" presetId="3aac28e2-80db-4347-b2e7-e901a76b60e7" />
+          <onRelease type="MSFS2020CustomInputAction" command="(L:S_PED_RMP1_XFER) ++ (&gt;L:S_PED_RMP1_XFER)" presetId="3aac28e2-80db-4347-b2e7-e901a76b60e7" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="90a1c67d-ea3c-4484-b669-9daa1496e90f">
+      <active>true</active>
+      <description>FNX_COMM_Encoder_Inner</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (CPT)/ SN-F58-4C7" name="CPT_COM_IN_ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_INNER) -- (&gt;L:E_PED_RMP1_INNER)" presetId="ba1c3d75-ee9d-44a2-8681-af89b51e572a" />
+          <onLeftFast type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_INNER) -- (&gt;L:E_PED_RMP1_INNER)" presetId="ba1c3d75-ee9d-44a2-8681-af89b51e572a" />
+          <onRight type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_INNER) ++ (&gt;L:E_PED_RMP1_INNER)" presetId="c87ca833-fe86-4207-bfc3-efb87f78e6ec" />
+          <onRightFast type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_INNER) ++ (&gt;L:E_PED_RMP1_INNER)" presetId="c87ca833-fe86-4207-bfc3-efb87f78e6ec" />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b2a346fd-74e7-45c1-9efa-73f627d7a201">
+      <active>true</active>
+      <description>FNX_COMM_Encoder_Outer</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="CoreFlightTech COMM (CPT)/ SN-F58-4C7" name="CPT_COM_OUT_ENC" type="Encoder" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <encoder>
+          <onLeft type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_OUTER) -- (&gt;L:E_PED_RMP1_OUTER)" presetId="c0d93488-57db-42ba-9717-10d5adf82ee7" />
+          <onLeftFast type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_OUTER) -- (&gt;L:E_PED_RMP1_OUTER)" presetId="c0d93488-57db-42ba-9717-10d5adf82ee7" />
+          <onRight type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_OUTER) ++ (&gt;L:E_PED_RMP1_OUTER)" presetId="7ac16a03-9fa8-43eb-bb04-de9b62191100" />
+          <onRightFast type="MSFS2020CustomInputAction" command="(L:E_PED_RMP1_OUTER) ++ (&gt;L:E_PED_RMP1_OUTER)" presetId="7ac16a03-9fa8-43eb-bb04-de9b62191100" />
+        </encoder>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>
